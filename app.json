@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/Top100/Top100",
+    "pages/ERC20/ERC20",
+    "pages/TokenInfo/TokenInfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "富豪榜",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/Top100/Top100",
+        "text": "全球"
+      },
+      {
+        "pagePath": "pages/ERC20/ERC20",
+        "text": "专有"
+      }
+    ]
+  }
+}

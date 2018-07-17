@@ -1,0 +1,15 @@
+<!--TokenInfo.wxml-->
+<view class="token-list">
+  <view class='symbol'>{{token_symbol}}</view>
+  <view>最后更新：{{timestamp}}</view>
+  <view class='top10'>前10地址包含: {{top10}}%</view>
+  <view class='top30'>前30地址包含: {{top30}}%</view>
+  <view class='top50'>前50地址包含: {{top50}}%</view>
+
+  <block wx:for='{{tokens}}' wx:key='token.address' wx:for-item='token'>
+    <text class='rank'>\n排名：{{index + 1}} </text>
+    <text class='percentage'>百分比：{{token.percentage}} </text>
+    <text class='amount'>数量：{{token.amount}} </text>
+    <text class='address'>地址: {{token.address}} </text>
+  </block>
+</view>

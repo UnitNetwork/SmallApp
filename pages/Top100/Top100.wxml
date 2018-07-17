@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class='page_row'>
+  <view class="search">
+    <view class="df search_arr">
+      <icon class="searchicon" size='20' type='search'></icon>
+      <input class="" placeholder="请输入关键字" bindinput='getTokenSymbol'/>
+    </view>
+  </view>
+  <navigator url="../TokenInfo/TokenInfo?symbol={{searchValue}}">
+      <view class='searchButton'>搜索</view>
+  </navigator>
+</view>
+
+<view class="container">
+  <view class="usermotto">
+    <view>{{msg}}</view>
+    <view>(部分仍在建设中)</view>
+    <view>最后更新:{{timestamp}}</view>
+    <block wx:for="{{top100}}" wx:key="symbol" wx:for-item="token">
+      <navigator url="../TokenInfo/TokenInfo?symbol={{token.symbol}}">
+        <button class="navigator-text">{{token.symbol}}</button>
+      </navigator>
+    </block>
+
+
+  </view>
+</view>
